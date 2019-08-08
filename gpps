@@ -1,0 +1,25 @@
+#!/bin/sh
+
+out=$(git push 2>&1)
+# out=$(cat tmp)
+
+echo $out
+
+# check if not up to date
+if echo $out | grep -q "\[rejected\]"; then
+  out=$(git pull 2>&1)
+  echo $out
+
+  # check for merge conflicts
+  if echo $out | grep -q "CONFLICT"; then
+
+    echo "❌ FIX YOUR MERGE CONFLICTS"
+
+  else # all good, push again
+    out=$(git push 2>&1)
+    echo $out
+    echo "✅ done"
+  fi
+else
+  echo "✅ done"
+fi
