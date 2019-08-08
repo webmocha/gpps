@@ -15,7 +15,7 @@ Can save time, useful for collaborating on same branch or using [TBD](https://tr
 ### One Liner
 
 ```sh
-sh -c $(curl https://github.com/webmocha/gpps/blob/master/install.curl.sh)
+curl -s https://raw.githubusercontent.com/webmocha/gpps/master/install.curl.sh | sh
 ```
 
 ### Manual
