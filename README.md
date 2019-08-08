@@ -12,16 +12,16 @@ Can save time, useful for collaborating on same branch or using [TBD](https://tr
 
 ## Installation
 
+### One Liner
+
+```sh
+sh -c $(curl https://github.com/webmocha/gpps/blob/master/install.curl.sh)
+```
+
 ### Manual
 
 clone, then
-```
-# run these lines one by one until it succeeds
-echo $PATH | grep -q $HOME/.local/bin && cp -i gpps $HOME/.local/bin/ && echo INSTALLED
-echo $PATH | grep -q $HOME/.bin && cp -i gpps $HOME/.bin/ && echo INSTALLED
-echo $PATH | grep -q /usr/local/bin && cp -i gpps /usr/local/bin/ && echo INSTALLED
-```
 
-### One Liner
-
-TODO
+```sh
+./install.local.sh
+```
