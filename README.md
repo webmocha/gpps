@@ -25,3 +25,21 @@ clone, then
 ```sh
 ./install.local.sh
 ```
+
+## Usage
+
+when you want to push, run `gpps`
+
+## Alias (optional)
+
+do this after installing, it's cool 😎
+
+```sh
+git config --global alias.ppush '!gpps'
+```
+
+then you can run
+
+```sh
+git ppush
+```
