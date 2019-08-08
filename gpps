@@ -3,12 +3,12 @@
 out=$(git push 2>&1)
 # out=$(cat tmp)
 
-echo $out
+echo "$out"
 
 # check if not up to date
 if echo $out | grep -q "\[rejected\]"; then
   out=$(git pull 2>&1)
-  echo $out
+  echo "$out"
 
   # check for merge conflicts
   if echo $out | grep -q "CONFLICT"; then
@@ -17,7 +17,7 @@ if echo $out | grep -q "\[rejected\]"; then
 
   else # all good, push again
     out=$(git push 2>&1)
-    echo $out
+    echo "$out"
     echo "✅ done"
   fi
 else
